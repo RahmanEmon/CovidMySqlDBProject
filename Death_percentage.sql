@@ -18,3 +18,10 @@ SELECT location, MAX(CAST(total_deaths AS UNSIGNED)) AS highest_death_count
     GROUP BY location
     ORDER BY highest_death_count DESC;
 
+-- Continents with the highest death count
+
+SELECT continent, MAX(CAST(total_deaths AS UNSIGNED)) AS highest_death_count
+	FROM coviddeaths
+    GROUP BY continent
+    ORDER BY highest_death_count DESC;
+
