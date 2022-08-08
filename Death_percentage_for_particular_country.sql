@@ -4,3 +4,9 @@ SELECT location, date, total_cases, total_deaths, (total_deaths/total_cases)*100
 	FROM coviddeaths
     WHERE location LIKE '%states%'
 	ORDER BY 1,5 DESC;
+    
+-- Fetching the data of countries that start with "C"
+SELECT location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 AS death_percentage
+	FROM coviddeaths
+	WHERE location LIKE 'c%'
+	ORDER BY 1,5 DESC;
